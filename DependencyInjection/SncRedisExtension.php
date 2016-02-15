@@ -229,7 +229,6 @@ class SncRedisExtension extends Extension
         $phpredisId = sprintf('snc_redis.phpredis.%s', $client['alias']);
         $phpredisDef = new Definition($container->getParameter('snc_redis.phpredis_client.class'));
         $phpredisDef->setPublic(false);
-        $phpredisDef->setScope(ContainerInterface::SCOPE_CONTAINER);
         $connectMethod = $client['options']['connection_persistent'] ? 'pconnect' : 'connect';
         $connectParameters = array();
         if (null !== $dsn->getSocket()) {
