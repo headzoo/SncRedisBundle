@@ -11,7 +11,7 @@
 
 namespace Snc\RedisBundle\Logger;
 
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * RedisLogger
