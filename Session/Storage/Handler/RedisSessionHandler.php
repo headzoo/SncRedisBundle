@@ -165,6 +165,8 @@ class RedisSessionHandler implements \SessionHandlerInterface
         } else {
             $this->redis->set($this->getRedisKey($sessionId), $data);
         }
+        
+        return true;
     }
 
     /**
